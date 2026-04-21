@@ -1,0 +1,46 @@
+{
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "Type of vulnerability (e.g., hardcoded_secret, weak_crypto, vulnerable_dependency)"
+    },
+    "file": {
+      "type": "string",
+      "description": "File name where issue is found"
+    },
+    "line": {
+      "type": ["number", "null"],
+      "description": "Line number of issue (null if not applicable)"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["Low", "Medium", "High", "Critical"]
+    },
+    "message": {
+      "type": "string",
+      "description": "Short description of the issue"
+    },
+    "source": {
+      "type": "string",
+      "enum": ["dependency", "code", "config"]
+    },
+    "cve_id": {
+      "type": ["string", "null"],
+      "description": "CVE identifier (if applicable)"
+    },
+    "package": {
+      "type": ["string", "null"],
+      "description": "Package name (for dependency issues)"
+    },
+    "suggestion": {
+      "type": ["string", "null"],
+      "description": "Recommended fix"
+    },
+    "explanation": {
+      "type": ["string", "null"],
+      "description": "Detailed explanation"
+    }
+  },
+  "required": ["type", "file", "severity", "message", "source"]
+}
