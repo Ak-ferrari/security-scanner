@@ -1,4 +1,4 @@
-const API_URL = "http://127.0.0.1:5000";
+const API_URL = process.env.REACT_APP_API_URL;
 
 export async function runScan({ code, requirements, config }) {
   const response = await fetch(`${API_URL}/scan`, {
