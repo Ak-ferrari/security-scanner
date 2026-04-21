@@ -20,7 +20,7 @@ def generate_suggestion(issue):
         return {
             "explanation": (
                 "Weak cryptographic algorithms such as MD5 or SHA1 are susceptible "
-                to collision and tampering attacks."
+                "to collision and tampering attacks."
             ),
             "impact": (
                 "This can weaken integrity checks, password storage, or other "
